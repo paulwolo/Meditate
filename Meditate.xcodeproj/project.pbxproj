@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		150B7D5120A8F61100C5B693 /* Launch_Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 150B7D5020A8F61100C5B693 /* Launch_Logo.png */; };
 		153CAA072097EDE900CBA178 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153CAA062097EDE900CBA178 /* AppDelegate.swift */; };
 		153CAA092097EDE900CBA178 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153CAA082097EDE900CBA178 /* ViewController.swift */; };
 		153CAA0C2097EDE900CBA178 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 153CAA0A2097EDE900CBA178 /* Main.storyboard */; };
 		153CAA0E2097EDE900CBA178 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 153CAA0D2097EDE900CBA178 /* Assets.xcassets */; };
 		153CAA112097EDE900CBA178 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 153CAA0F2097EDE900CBA178 /* LaunchScreen.storyboard */; };
+		15F0BFAB20A7B816007D4B5E /* BWWalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F0BFA920A7B816007D4B5E /* BWWalkthroughViewController.swift */; };
+		15F0BFAC20A7B816007D4B5E /* BWWalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F0BFAA20A7B816007D4B5E /* BWWalkthroughPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		150B7D5020A8F61100C5B693 /* Launch_Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Launch_Logo.png; sourceTree = "<group>"; };
+		150B7D5220A910C300C5B693 /* Meditate.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Meditate.entitlements; sourceTree = "<group>"; };
 		153CAA032097EDE900CBA178 /* Meditate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meditate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		153CAA062097EDE900CBA178 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		153CAA082097EDE900CBA178 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +27,8 @@
 		153CAA0D2097EDE900CBA178 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		153CAA102097EDE900CBA178 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		153CAA122097EDE900CBA178 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15F0BFA920A7B816007D4B5E /* BWWalkthroughViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BWWalkthroughViewController.swift; sourceTree = "<group>"; };
+		15F0BFAA20A7B816007D4B5E /* BWWalkthroughPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BWWalkthroughPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,11 +42,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		150B7D5320A910C300C5B693 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		153CA9FA2097EDE900CBA178 = {
 			isa = PBXGroup;
 			children = (
 				153CAA052097EDE900CBA178 /* Meditate */,
 				153CAA042097EDE900CBA178 /* Products */,
+				150B7D5320A910C300C5B693 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,11 +69,15 @@
 		153CAA052097EDE900CBA178 /* Meditate */ = {
 			isa = PBXGroup;
 			children = (
+				150B7D5220A910C300C5B693 /* Meditate.entitlements */,
 				153CAA062097EDE900CBA178 /* AppDelegate.swift */,
 				153CAA082097EDE900CBA178 /* ViewController.swift */,
 				153CAA0A2097EDE900CBA178 /* Main.storyboard */,
+				15F0BFAA20A7B816007D4B5E /* BWWalkthroughPageViewController.swift */,
+				15F0BFA920A7B816007D4B5E /* BWWalkthroughViewController.swift */,
 				153CAA0D2097EDE900CBA178 /* Assets.xcassets */,
 				153CAA0F2097EDE900CBA178 /* LaunchScreen.storyboard */,
+				150B7D5020A8F61100C5B693 /* Launch_Logo.png */,
 				153CAA122097EDE900CBA178 /* Info.plist */,
 			);
 			path = Meditate;
@@ -97,6 +116,11 @@
 					153CAA022097EDE900CBA178 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -124,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				153CAA112097EDE900CBA178 /* LaunchScreen.storyboard in Resources */,
+				150B7D5120A8F61100C5B693 /* Launch_Logo.png in Resources */,
 				153CAA0E2097EDE900CBA178 /* Assets.xcassets in Resources */,
 				153CAA0C2097EDE900CBA178 /* Main.storyboard in Resources */,
 			);
@@ -137,7 +162,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				153CAA092097EDE900CBA178 /* ViewController.swift in Sources */,
+				15F0BFAC20A7B816007D4B5E /* BWWalkthroughPageViewController.swift in Sources */,
 				153CAA072097EDE900CBA178 /* AppDelegate.swift in Sources */,
+				15F0BFAB20A7B816007D4B5E /* BWWalkthroughViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,7 +308,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = paulwolo.umd.edu.Meditate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -296,7 +323,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = paulwolo.umd.edu.Meditate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

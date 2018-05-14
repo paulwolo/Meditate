@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,399 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Meditate" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lights Out" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PEb-E6-RzN">
+                                <rect key="frame" x="127" y="40" width="121" height="32.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <color key="textColor" red="0.72865496289999998" green="0.93148419760000001" blue="0.96216261390000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Remaining" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="waW-0I-vhM">
+                                <rect key="frame" x="127" y="192.5" width="122" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.72865496289999998" green="0.93148419760000001" blue="0.96216261390000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="odc-zH-nyC">
+                                <rect key="frame" x="162" y="637" width="51" height="30"/>
+                                <state key="normal" title="Tutorial">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="walkthroughButtonTouched" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vw9-VZ-xfr"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="90" translatesAutoresizingMaskIntoConstraints="NO" id="yEk-vA-25M">
+                                <rect key="frame" x="37" y="497" width="302" height="106"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CGk-v1-g63">
+                                        <rect key="frame" x="0.0" y="0.0" width="106" height="106"/>
+                                        <color key="backgroundColor" red="0.17138457243270053" green="0.21939733190642863" blue="0.22797033629441621" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="106" id="eQ4-nR-sO9"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                        <state key="normal" title="Reset">
+                                            <color key="titleColor" red="0.0" green="0.0220716613" blue="0.32948105570000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="53"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="resetTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1om-6w-Aj8"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WWG-GU-0o7">
+                                        <rect key="frame" x="196" y="0.0" width="106" height="106"/>
+                                        <color key="backgroundColor" red="0.72941176470000002" green="0.93333333330000001" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                        <state key="normal" title="Start">
+                                            <color key="titleColor" red="0.0" green="0.0220716613" blue="0.32948105570000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="53"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="beginMeditation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="88R-EN-PU6"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="106" id="yRa-0u-Yhq"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wyr-lZ-b11">
+                                <rect key="frame" x="45.5" y="213" width="284.5" height="135"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="113"/>
+                                <color key="textColor" red="0.72865496289999998" green="0.93148419760000001" blue="0.96216261390000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0099574153305033129" blue="0.13868949478629455" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Wyr-lZ-b11" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="1Gi-Ea-2oq"/>
+                            <constraint firstItem="Wyr-lZ-b11" firstAttribute="top" secondItem="waW-0I-vhM" secondAttribute="bottom" id="C54-Yq-j2t"/>
+                            <constraint firstItem="odc-zH-nyC" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="EJc-I4-Afg"/>
+                            <constraint firstItem="waW-0I-vhM" firstAttribute="top" secondItem="PEb-E6-RzN" secondAttribute="bottom" priority="500" constant="120" id="FT4-N9-lgO"/>
+                            <constraint firstItem="odc-zH-nyC" firstAttribute="top" relation="greaterThanOrEqual" secondItem="yEk-vA-25M" secondAttribute="bottom" constant="20" id="Lb7-MZ-tbg"/>
+                            <constraint firstItem="PEb-E6-RzN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="WMI-1E-oV8"/>
+                            <constraint firstItem="waW-0I-vhM" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Wfw-Pl-vmz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="odc-zH-nyC" secondAttribute="bottom" id="dT7-rJ-Qkl"/>
+                            <constraint firstItem="PEb-E6-RzN" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="fKP-Rm-lTS"/>
+                            <constraint firstItem="yEk-vA-25M" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="hpU-o7-pS6"/>
+                            <constraint firstItem="odc-zH-nyC" firstAttribute="top" secondItem="yEk-vA-25M" secondAttribute="bottom" priority="750" constant="34" id="oQ3-Rb-j2I"/>
+                            <constraint firstItem="waW-0I-vhM" firstAttribute="top" relation="greaterThanOrEqual" secondItem="PEb-E6-RzN" secondAttribute="bottom" constant="20" id="tge-wD-agZ"/>
+                            <constraint firstItem="yEk-vA-25M" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Wyr-lZ-b11" secondAttribute="bottom" constant="20" id="u0E-RG-J1P"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="BeginMeditationButton" destination="WWG-GU-0o7" id="taK-qG-rTW"/>
+                        <outlet property="resetButton" destination="CGk-v1-g63" id="MOd-Oh-AxF"/>
+                        <outlet property="timeRemainingDisplay" destination="Wyr-lZ-b11" id="I33-NO-njy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+        <!--Walkthrough View Controller-->
+        <scene sceneID="aiZ-6a-EVP">
+            <objects>
+                <viewController storyboardIdentifier="Master" id="1Pd-NG-8gn" customClass="BWWalkthroughViewController" customModule="Meditate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ewh-KI-3vz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="jrj-2A-faN">
+                                <rect key="frame" x="168" y="600" width="39" height="37"/>
+                            </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2id-h7-H4P">
+                                <rect key="frame" x="167.5" y="637" width="39" height="30"/>
+                                <state key="normal" title="Close">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="close:" destination="1Pd-NG-8gn" eventType="touchUpInside" id="cZj-eT-PZc"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tutorial" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s37-fq-tUM">
+                                <rect key="frame" x="159" y="40" width="57" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.01176470588" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="2id-h7-H4P" firstAttribute="centerX" secondItem="t2x-87-vL4" secondAttribute="centerX" id="24w-ZL-T2X"/>
+                            <constraint firstItem="s37-fq-tUM" firstAttribute="centerX" secondItem="t2x-87-vL4" secondAttribute="centerX" id="3DD-bI-Lo0"/>
+                            <constraint firstItem="s37-fq-tUM" firstAttribute="top" secondItem="t2x-87-vL4" secondAttribute="top" constant="20" id="4SX-45-JN8"/>
+                            <constraint firstItem="jrj-2A-faN" firstAttribute="centerX" secondItem="t2x-87-vL4" secondAttribute="centerX" id="C1K-67-Mgr"/>
+                            <constraint firstItem="t2x-87-vL4" firstAttribute="bottom" secondItem="2id-h7-H4P" secondAttribute="bottom" id="DbS-8D-LVD"/>
+                            <constraint firstItem="jrj-2A-faN" firstAttribute="leading" secondItem="t2x-87-vL4" secondAttribute="leading" constant="168" id="bbc-hk-pH1"/>
+                            <constraint firstItem="t2x-87-vL4" firstAttribute="bottom" secondItem="jrj-2A-faN" secondAttribute="bottom" constant="30" id="eGP-w5-znb"/>
+                            <constraint firstItem="t2x-87-vL4" firstAttribute="trailing" secondItem="jrj-2A-faN" secondAttribute="trailing" constant="168" id="qUN-ao-zhQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="t2x-87-vL4"/>
+                    </view>
+                    <connections>
+                        <outlet property="closeButton" destination="2id-h7-H4P" id="dnZ-Sg-bmJ"/>
+                        <outlet property="pageControl" destination="jrj-2A-faN" id="q8W-ju-fnY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ybb-Uh-DcO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="787" y="129"/>
+        </scene>
+        <!--Walkthrough Page View Controller-->
+        <scene sceneID="s6N-1e-CJj">
+            <objects>
+                <viewController storyboardIdentifier="page1" id="Ihg-9b-bga" customClass="BWWalkthroughPageViewController" customModule="Meditate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KwK-c0-oeO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A simple meditation guide to help you sleep quickly" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Psj-xY-pVa" userLabel="An extremely simple guided mediation">
+                                <rect key="frame" x="42" y="310.5" width="291.5" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="pNY-SJ-YGY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Lights Out" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B3i-c6-FJc">
+                                <rect key="frame" x="69.5" y="261.5" width="236" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To begin, lay in a dark room with your phone's flashlight facing the ceiling" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y4S-ze-QeI">
+                                <rect key="frame" x="43.5" y="396.5" width="288.5" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.4411682052" green="0.50947434759999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Psj-xY-pVa" firstAttribute="centerY" secondItem="8Mz-cy-Dhr" secondAttribute="centerY" id="1kL-I4-LvE"/>
+                            <constraint firstItem="y4S-ze-QeI" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8Mz-cy-Dhr" secondAttribute="leading" constant="16" id="6Cp-zM-ORm"/>
+                            <constraint firstItem="8Mz-cy-Dhr" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="y4S-ze-QeI" secondAttribute="trailing" constant="16" id="GT9-6W-0wY"/>
+                            <constraint firstItem="Psj-xY-pVa" firstAttribute="centerX" secondItem="8Mz-cy-Dhr" secondAttribute="centerX" id="HuB-8T-LvK"/>
+                            <constraint firstItem="8Mz-cy-Dhr" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Psj-xY-pVa" secondAttribute="trailing" constant="16" id="LCg-5p-TKi"/>
+                            <constraint firstItem="B3i-c6-FJc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8Mz-cy-Dhr" secondAttribute="leading" constant="16" id="X1i-Gu-4Qw"/>
+                            <constraint firstItem="y4S-ze-QeI" firstAttribute="top" secondItem="Psj-xY-pVa" secondAttribute="bottom" constant="20" id="Xhc-vS-Cxa"/>
+                            <constraint firstItem="8Mz-cy-Dhr" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="B3i-c6-FJc" secondAttribute="trailing" constant="16" id="Z8A-ue-qSq"/>
+                            <constraint firstItem="B3i-c6-FJc" firstAttribute="centerX" secondItem="8Mz-cy-Dhr" secondAttribute="centerX" id="ZHf-dD-Mgs"/>
+                            <constraint firstItem="y4S-ze-QeI" firstAttribute="centerX" secondItem="8Mz-cy-Dhr" secondAttribute="centerX" id="dGZ-1a-vF5"/>
+                            <constraint firstItem="Psj-xY-pVa" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8Mz-cy-Dhr" secondAttribute="leading" constant="16" id="uhB-Z9-ha8"/>
+                            <constraint firstItem="Psj-xY-pVa" firstAttribute="top" secondItem="B3i-c6-FJc" secondAttribute="bottom" constant="20" id="z0H-KP-SWG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8Mz-cy-Dhr"/>
+                    </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="animateAlpha" value="YES"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="animationType" value="InOut"/>
+                        <userDefinedRuntimeAttribute type="point" keyPath="speed">
+                            <point key="value" x="1" y="2"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Z9-Ry-gU4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1496.8" y="130.88455772113943"/>
+        </scene>
+        <!--Walkthrough Page View Controller-->
+        <scene sceneID="wNV-Ff-Fav">
+            <objects>
+                <viewController storyboardIdentifier="page2" id="dKp-cC-pK4" customClass="BWWalkthroughPageViewController" customModule="Meditate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1cU-Ie-Wsd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When the light gets brighter, breathe in. When the light gets darker, breathe out" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MzU-n8-FRV" userLabel="An extremely simple guided mediation">
+                                <rect key="frame" x="33.5" y="310.5" width="308.5" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="uuA-pP-2iB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No need to breathe deeply, just breathe as comfortably as possible" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MKV-2o-USA">
+                                <rect key="frame" x="23" y="396.5" width="329" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Match your breathing to the light" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qv5-Hc-mOR">
+                                <rect key="frame" x="20" y="262" width="335" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.4411682052" green="0.50947434759999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" red="0.0" green="0.014710825300000001" blue="0.21960006479999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="MzU-n8-FRV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="A9w-p9-bd2" secondAttribute="leading" constant="16" id="1fC-Uc-uUE"/>
+                            <constraint firstItem="Qv5-Hc-mOR" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="A9w-p9-bd2" secondAttribute="leading" constant="16" id="4Jd-dT-HIo"/>
+                            <constraint firstItem="MzU-n8-FRV" firstAttribute="centerX" secondItem="A9w-p9-bd2" secondAttribute="centerX" id="4Ll-dR-xEV"/>
+                            <constraint firstItem="MzU-n8-FRV" firstAttribute="centerY" secondItem="A9w-p9-bd2" secondAttribute="centerY" id="5he-CF-5JS"/>
+                            <constraint firstItem="MzU-n8-FRV" firstAttribute="top" secondItem="Qv5-Hc-mOR" secondAttribute="bottom" constant="20" id="Ahn-AV-24C"/>
+                            <constraint firstItem="A9w-p9-bd2" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="MKV-2o-USA" secondAttribute="trailing" constant="16" id="Dwu-zi-idS"/>
+                            <constraint firstItem="A9w-p9-bd2" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="MzU-n8-FRV" secondAttribute="trailing" constant="16" id="J8T-ei-TOx"/>
+                            <constraint firstItem="MKV-2o-USA" firstAttribute="centerX" secondItem="A9w-p9-bd2" secondAttribute="centerX" id="T8r-n4-RIh"/>
+                            <constraint firstItem="MKV-2o-USA" firstAttribute="top" secondItem="MzU-n8-FRV" secondAttribute="bottom" constant="20" id="f82-Xt-fhA"/>
+                            <constraint firstItem="A9w-p9-bd2" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Qv5-Hc-mOR" secondAttribute="trailing" constant="16" id="fYv-U0-W3l"/>
+                            <constraint firstItem="MKV-2o-USA" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="A9w-p9-bd2" secondAttribute="leading" constant="16" id="k0T-OF-eqo"/>
+                            <constraint firstItem="Qv5-Hc-mOR" firstAttribute="centerX" secondItem="A9w-p9-bd2" secondAttribute="centerX" id="uAp-eA-sBd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="A9w-p9-bd2"/>
+                    </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="animateAlpha" value="YES"/>
+                        <userDefinedRuntimeAttribute type="point" keyPath="speed">
+                            <point key="value" x="1" y="2"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="string" keyPath="animationType" value="InOut"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9rN-R0-cgU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2168.8000000000002" y="133.5832083958021"/>
+        </scene>
+        <!--Walkthrough Page View Controller-->
+        <scene sceneID="MWz-S7-Rp5">
+            <objects>
+                <viewController storyboardIdentifier="page3" id="omX-61-Vj8" customClass="BWWalkthroughPageViewController" customModule="Meditate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XiQ-Or-B2w">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Over 10 minutes, Lights Out will slow your breathing from 12 breaths per minute to 6 breaths per minute" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kPA-sk-ZEr" userLabel="An extremely simple guided mediation">
+                                <rect key="frame" x="26" y="310.5" width="323" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="nMp-KL-gy8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9pG-n1-HLY">
+                                <rect key="frame" x="30" y="397" width="315" height="81.5"/>
+                                <string key="text">Research shows that at 6 breaths per minute, the baroreflex is stimulated. This physiological reflex slows your heart rate and helps you relax</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lights Out helps you relax" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m4G-zZ-pZN">
+                                <rect key="frame" x="54" y="261.5" width="267" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.4411682052" green="0.50947434759999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="9pG-n1-HLY" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="aSb-jq-TNs" secondAttribute="leading" constant="16" id="1PE-vg-bna"/>
+                            <constraint firstItem="9pG-n1-HLY" firstAttribute="top" secondItem="kPA-sk-ZEr" secondAttribute="bottom" constant="20" id="20L-La-Dk4"/>
+                            <constraint firstItem="m4G-zZ-pZN" firstAttribute="centerX" secondItem="aSb-jq-TNs" secondAttribute="centerX" id="8zc-gI-7bu"/>
+                            <constraint firstItem="aSb-jq-TNs" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="m4G-zZ-pZN" secondAttribute="trailing" constant="16" id="D8b-U2-kfk"/>
+                            <constraint firstItem="kPA-sk-ZEr" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="aSb-jq-TNs" secondAttribute="leading" constant="16" id="Luy-I3-QqF"/>
+                            <constraint firstItem="aSb-jq-TNs" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="kPA-sk-ZEr" secondAttribute="trailing" constant="16" id="PU2-pj-uuw"/>
+                            <constraint firstItem="kPA-sk-ZEr" firstAttribute="top" secondItem="m4G-zZ-pZN" secondAttribute="bottom" constant="20" id="Z0L-0M-Kyv"/>
+                            <constraint firstItem="aSb-jq-TNs" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="9pG-n1-HLY" secondAttribute="trailing" constant="16" id="a61-en-Y8j"/>
+                            <constraint firstItem="9pG-n1-HLY" firstAttribute="centerX" secondItem="aSb-jq-TNs" secondAttribute="centerX" id="e8l-6N-mXo"/>
+                            <constraint firstItem="kPA-sk-ZEr" firstAttribute="centerY" secondItem="aSb-jq-TNs" secondAttribute="centerY" id="hbC-55-bjF"/>
+                            <constraint firstItem="m4G-zZ-pZN" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="aSb-jq-TNs" secondAttribute="leading" constant="16" id="iWb-so-OH4"/>
+                            <constraint firstItem="kPA-sk-ZEr" firstAttribute="centerX" secondItem="aSb-jq-TNs" secondAttribute="centerX" id="lOa-kZ-Zpd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aSb-jq-TNs"/>
+                    </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="point" keyPath="speed">
+                            <point key="value" x="1" y="2"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="string" keyPath="animationType" value="InOut"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="animateAlpha" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uxV-ix-vtR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2844" y="133.5832083958021"/>
+        </scene>
+        <!--Walkthrough Page View Controller-->
+        <scene sceneID="Bfx-wO-3Jp">
+            <objects>
+                <viewController storyboardIdentifier="page4" id="fXo-aT-nTM" customClass="BWWalkthroughPageViewController" customModule="Meditate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zol-2i-gUG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lights Out will automatically stop after 10 minutes, keeping your phone battery charged" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CIo-RK-3cy" userLabel="An extremely simple guided mediation">
+                                <rect key="frame" x="27.5" y="310" width="319.5" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="aAw-rL-z6w"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For best results, place your phone on &quot;Do Not Disturb&quot; mode" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JRI-RB-XGI">
+                                <rect key="frame" x="27.5" y="396" width="321" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sleep Better" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t74-5Q-6BB">
+                                <rect key="frame" x="124" y="261" width="127" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.4411682052" green="0.50947434759999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="mRW-27-DNv" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="t74-5Q-6BB" secondAttribute="trailing" constant="16" id="1Qd-dZ-mOG"/>
+                            <constraint firstItem="JRI-RB-XGI" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="mRW-27-DNv" secondAttribute="leading" constant="16" id="87A-wr-mjQ"/>
+                            <constraint firstItem="CIo-RK-3cy" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="mRW-27-DNv" secondAttribute="leading" constant="16" id="DJr-kI-reM"/>
+                            <constraint firstItem="JRI-RB-XGI" firstAttribute="centerX" secondItem="mRW-27-DNv" secondAttribute="centerX" id="Iq0-fR-UlU"/>
+                            <constraint firstItem="CIo-RK-3cy" firstAttribute="centerY" secondItem="mRW-27-DNv" secondAttribute="centerY" id="L2h-1g-dub"/>
+                            <constraint firstItem="mRW-27-DNv" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="CIo-RK-3cy" secondAttribute="trailing" constant="16" id="O84-YJ-ZJZ"/>
+                            <constraint firstItem="CIo-RK-3cy" firstAttribute="top" secondItem="t74-5Q-6BB" secondAttribute="bottom" constant="20" id="ZBi-8X-b9S"/>
+                            <constraint firstItem="JRI-RB-XGI" firstAttribute="top" secondItem="CIo-RK-3cy" secondAttribute="bottom" constant="20" id="cQN-yJ-FSo"/>
+                            <constraint firstItem="mRW-27-DNv" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="JRI-RB-XGI" secondAttribute="trailing" constant="16" id="fM4-Op-yll"/>
+                            <constraint firstItem="t74-5Q-6BB" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="mRW-27-DNv" secondAttribute="leading" constant="16" id="lYf-DM-PM6"/>
+                            <constraint firstItem="t74-5Q-6BB" firstAttribute="centerX" secondItem="mRW-27-DNv" secondAttribute="centerX" id="pa4-ZS-pYQ"/>
+                            <constraint firstItem="CIo-RK-3cy" firstAttribute="centerX" secondItem="mRW-27-DNv" secondAttribute="centerX" id="pky-kL-5K2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mRW-27-DNv"/>
+                    </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="animateAlpha" value="YES"/>
+                        <userDefinedRuntimeAttribute type="point" keyPath="speed">
+                            <point key="value" x="1" y="2"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="string" keyPath="animationType" value="InOut"/>
+                        <userDefinedRuntimeAttribute type="point" keyPath="speedVariance">
+                            <point key="value" x="0.0" y="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tr6-64-Nrv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3501.5999999999999" y="135.38230884557723"/>
         </scene>
     </scenes>
 </document>
